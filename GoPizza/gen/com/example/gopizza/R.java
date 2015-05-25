@@ -22,16 +22,23 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int black_overlay=0x7f040000;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int welcome19201080=0x7f020001;
+        public static final int drinkdessertmenu=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int mainmenu=0x7f020002;
+        public static final int pizzamenu=0x7f020003;
+        public static final int resumemenu=0x7f020004;
+        public static final int welcome=0x7f020005;
     }
     public static final class id {
         public static final int fullscreen_content=0x7f070000;
-        public static final int fullscreen_content_controls=0x7f070002;
-        public static final int imageView1=0x7f070001;
+        public static final int progressBar=0x7f070002;
+        public static final int textView=0x7f070003;
+        public static final int welcome=0x7f070001;
     }
     public static final class layout {
         public static final int activity_fullscreen=0x7f030000;
+        public static final int mainmenu_fullscreen=0x7f030001;
+        public static final int pizzamenu_fullscreen=0x7f030002;
     }
     public static final class string {
         public static final int app_name=0x7f050000;

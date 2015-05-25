@@ -31,13 +31,13 @@
         android:fitsSystemWindows="true" >
         
         <ImageView
-            android:id="@+id/imageView1"
+            android:id="@+id/welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/welcome19201080"
-            android:scaleType="centerCrop" />
+            android:scaleType="fitXY"
+            android:src="@drawable/welcome" />
 
-        <LinearLayout
+<!--         <LinearLayout
             android:id="@+id/fullscreen_content_controls"
             style="?metaButtonBarStyle"
             android:layout_width="match_parent"
@@ -46,7 +46,27 @@
             android:background="@color/black_overlay"
             android:orientation="horizontal"
             tools:ignore="UselessParent" >
-        </LinearLayout>
+        </LinearLayout> -->
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTintMode="src_over"
+            android:paddingLeft="140dp"
+            android:paddingTop="375dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="140dp"
+            android:paddingTop="475dp"
+            android:text="Loading..."
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#469d4b"
+            android:textSize="20sp" />
 
     </FrameLayout>
 
