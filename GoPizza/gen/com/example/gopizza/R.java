@@ -22,14 +22,23 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int black_overlay=0x7f040000;
     }
     public static final class drawable {
-        public static final int drinkdessertmenu=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int mainmenu=0x7f020002;
-        public static final int pizzamenu=0x7f020003;
-        public static final int resumemenu=0x7f020004;
-        public static final int welcome=0x7f020005;
+        public static final int background=0x7f020000;
+        public static final int drinkdessertmenu=0x7f020001;
+        public static final int efreit=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int info=0x7f020004;
+        public static final int mainmenu=0x7f020005;
+        public static final int pizzamenu=0x7f020006;
+        public static final int resumemenu=0x7f020007;
+        public static final int roundedbutton=0x7f020008;
+        public static final int welcome=0x7f020009;
     }
     public static final class id {
+        public static final int ButtonBottomLeft=0x7f070005;
+        public static final int ButtonBottomRight=0x7f070007;
+        public static final int ButtonCenter=0x7f070006;
+        public static final int ButtonTop=0x7f070008;
+        public static final int background=0x7f070004;
         public static final int fullscreen_content=0x7f070000;
         public static final int progressBar=0x7f070002;
         public static final int textView=0x7f070003;
@@ -37,8 +46,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class layout {
         public static final int activity_fullscreen=0x7f030000;
-        public static final int mainmenu_fullscreen=0x7f030001;
-        public static final int pizzamenu_fullscreen=0x7f030002;
+        public static final int info_fullscreen=0x7f030001;
+        public static final int mainmenu_fullscreen=0x7f030002;
+        public static final int pizzamenu_fullscreen=0x7f030003;
     }
     public static final class string {
         public static final int app_name=0x7f050000;

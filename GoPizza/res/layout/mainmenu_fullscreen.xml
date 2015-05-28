@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true" >
-        
+
         <ImageView
             android:id="@+id/welcome"
             android:layout_width="wrap_content"
@@ -37,16 +37,46 @@
             android:scaleType="fitXY"
             android:src="@drawable/mainmenu" />
 
-<!--         <LinearLayout
-            android:id="@+id/fullscreen_content_controls"
-            style="?metaButtonBarStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:background="@color/black_overlay"
-            android:orientation="horizontal"
-            tools:ignore="UselessParent" >
-        </LinearLayout> -->
+        <Button
+            android:id="@+id/ButtonBottomLeft"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="350dp"
+            android:alpha="0"
+            android:background="@drawable/roundedbutton"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/ButtonCenter"
+            android:layout_width="190dp"
+            android:layout_height="189dp"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="165dp"
+            android:alpha="0"
+            android:background="@drawable/roundedbutton"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/ButtonBottomRight"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="350dp"
+            android:alpha="0"
+            android:background="@drawable/roundedbutton"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/ButtonTop"
+            android:layout_width="126dp"
+            android:layout_height="128dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="20dp"
+            android:alpha="0"
+            android:background="@drawable/roundedbutton"
+            android:text="Button" 
+            android:onClick="buttonTopClick"/>
 
     </FrameLayout>
 
