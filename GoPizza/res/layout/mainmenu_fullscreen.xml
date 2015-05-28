@@ -65,7 +65,8 @@
             android:layout_marginTop="350dp"
             android:alpha="0"
             android:background="@drawable/roundedbutton"
-            android:text="Button" />
+            android:text="Button" 
+            android:onClick="buttonBottomRightClick"/>
 
         <Button
             android:id="@+id/ButtonTop"

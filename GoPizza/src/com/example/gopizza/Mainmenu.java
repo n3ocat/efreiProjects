@@ -26,5 +26,12 @@ public class Mainmenu extends Activity {
 		finish();
 
 	}
+	
+	public void buttonBottomRightClick(View view) {
+
+		startActivity(new Intent(Mainmenu.this, Info.class));
+		finish();
+
+	}
 
 }
