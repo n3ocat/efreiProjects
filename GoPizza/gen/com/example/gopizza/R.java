@@ -39,6 +39,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ButtonCenter=0x7f070006;
         public static final int ButtonTop=0x7f070008;
         public static final int background=0x7f070004;
+        public static final int button1=0x7f070009;
         public static final int fullscreen_content=0x7f070000;
         public static final int progressBar=0x7f070002;
         public static final int textView=0x7f070003;

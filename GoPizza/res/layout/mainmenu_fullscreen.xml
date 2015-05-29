@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.gopizza.FullscreenActivity" >
+    tools:context="com.efrei.gopizza.FullscreenActivity" >
 
     <!--
          The primary full-screen view. This can be replaced with whatever view
@@ -78,6 +78,13 @@
             android:background="@drawable/roundedbutton"
             android:text="Button" 
             android:onClick="buttonTopClick"/>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Localisation"
+            android:onClick="Localisation" />
 
     </FrameLayout>
 

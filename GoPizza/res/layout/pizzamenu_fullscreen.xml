@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.gopizza.FullscreenActivity" >
+    tools:context="com.efrei.gopizza.FullscreenActivity" >
 
     <!--
          The primary full-screen view. This can be replaced with whatever view
