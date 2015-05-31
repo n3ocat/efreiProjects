@@ -5,4 +5,40 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
+    <string-array name="pizzaList1">
+        <item>Favorite pizza 1st : Reine</item>
+        <item>Favorite pizza 1st : 4Fromages</item>
+        <item>Favorite pizza 1st : Margherita</item>
+        <item>Favorite pizza 1st : Cannibale</item>
+        <item>Favorite pizza 1st : Forestière</item>
+        <item>Favorite pizza 1st : Indienne</item>
+        <item>Favorite pizza 1st : Orientale</item>
+        <item>Favorite pizza 1st : Saumoneta</item>
+        <item>Favorite pizza 1st : Savoyarde</item>
+    </string-array>
+    
+    <string-array name="pizzaList2">
+        <item>Favorite pizza 2nd : Reine</item>
+        <item>Favorite pizza 2nd : 4Fromages</item>
+        <item>Favorite pizza 2nd : Margherita</item>
+        <item>Favorite pizza 2nd : Cannibale</item>
+        <item>Favorite pizza 2nd : Forestière</item>
+        <item>Favorite pizza 2nd : Indienne</item>
+        <item>Favorite pizza 2nd : Orientale</item>
+        <item>Favorite pizza 2nd : Saumoneta</item>
+        <item>Favorite pizza 2nd : Savoyarde</item>
+    </string-array>
+    
+    <string-array name="pizzaList3">
+        <item>Favorite pizza 3th : Reine</item>
+        <item>Favorite pizza 3th : 4Fromages</item>
+        <item>Favorite pizza 3th : Margherita</item>
+        <item>Favorite pizza 3th : Cannibale</item>
+        <item>Favorite pizza 3th : Forestière</item>
+        <item>Favorite pizza 3th : Indienne</item>
+        <item>Favorite pizza 3th : Orientale</item>
+        <item>Favorite pizza 3th : Saumoneta</item>
+        <item>Favorite pizza 3th : Savoyarde</item>
+    </string-array>
+
 </resources>

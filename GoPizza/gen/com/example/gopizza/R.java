@@ -8,6 +8,11 @@
 package com.example.gopizza;
 
 public final class R {
+    public static final class array {
+        public static final int pizzaList1=0x7f060000;
+        public static final int pizzaList2=0x7f060001;
+        public static final int pizzaList3=0x7f060002;
+    }
     public static final class attr {
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -23,29 +28,61 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class drawable {
         public static final int background=0x7f020000;
-        public static final int drinkdessertmenu=0x7f020001;
-        public static final int efreit=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
-        public static final int info=0x7f020004;
-        public static final int launchlogo=0x7f020005;
-        public static final int mainmenu=0x7f020006;
-        public static final int pizzamenu=0x7f020007;
-        public static final int resumemenu=0x7f020008;
-        public static final int roundedbutton=0x7f020009;
-        public static final int welcome=0x7f02000a;
+        public static final int cannibale=0x7f020001;
+        public static final int cannibale_m=0x7f020002;
+        public static final int drinkdessertmenu=0x7f020003;
+        public static final int efreit=0x7f020004;
+        public static final int forestiere=0x7f020005;
+        public static final int forestiere_m=0x7f020006;
+        public static final int home=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
+        public static final int indienne=0x7f020009;
+        public static final int indienne_m=0x7f02000a;
+        public static final int info=0x7f02000b;
+        public static final int launchlogo=0x7f02000c;
+        public static final int localisation=0x7f02000d;
+        public static final int login=0x7f02000e;
+        public static final int logout=0x7f02000f;
+        public static final int mainmenu=0x7f020010;
+        public static final int margherita=0x7f020011;
+        public static final int margherita_m=0x7f020012;
+        public static final int orientale=0x7f020013;
+        public static final int orientale_m=0x7f020014;
+        public static final int pizzamenu=0x7f020015;
+        public static final int quatrefromage=0x7f020016;
+        public static final int quatrefromage_m=0x7f020017;
+        public static final int reine=0x7f020018;
+        public static final int reine_m=0x7f020019;
+        public static final int resumemenu=0x7f02001a;
+        public static final int roundedbutton=0x7f02001b;
+        public static final int saumoneta=0x7f02001c;
+        public static final int saumoneta_m=0x7f02001d;
+        public static final int savoyarde=0x7f02001e;
+        public static final int savoyarde_m=0x7f02001f;
+        public static final int welcome=0x7f020020;
     }
     public static final class id {
-        public static final int ButtonBottomLeft=0x7f070007;
-        public static final int ButtonBottomRight=0x7f070009;
-        public static final int ButtonCenter=0x7f070008;
-        public static final int ButtonTop=0x7f07000a;
-        public static final int background=0x7f070006;
-        public static final int button1=0x7f070004;
-        public static final int editText1=0x7f070005;
-        public static final int fullscreen_content=0x7f070000;
-        public static final int progressBar=0x7f070002;
-        public static final int textView=0x7f070003;
-        public static final int welcome=0x7f070001;
+        public static final int ButtonBottomLeft=0x7f080011;
+        public static final int ButtonBottomRight=0x7f080013;
+        public static final int ButtonCenter=0x7f080012;
+        public static final int ButtonTop=0x7f080014;
+        public static final int background=0x7f080010;
+        public static final int editTextCity=0x7f080008;
+        public static final int editTextLogin=0x7f080004;
+        public static final int editTextNameSurname=0x7f080006;
+        public static final int editTextPassword=0x7f080005;
+        public static final int editTextPostalCode=0x7f080009;
+        public static final int editTextStreet=0x7f080007;
+        public static final int fullscreen_content=0x7f080000;
+        public static final int imageButtonLocalisation=0x7f08000a;
+        public static final int imageButtonLogin=0x7f08000b;
+        public static final int imageButtonLogout=0x7f08000c;
+        public static final int progressBar=0x7f080002;
+        public static final int spinner1=0x7f08000d;
+        public static final int spinner2=0x7f08000e;
+        public static final int spinner3=0x7f08000f;
+        public static final int textView=0x7f080003;
+        public static final int welcome=0x7f080001;
     }
     public static final class layout {
         public static final int activity_fullscreen=0x7f030000;
@@ -84,15 +121,15 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
-        public static final int ButtonBar=0x7f060003;
-        public static final int ButtonBarButton=0x7f060004;
-        public static final int FullscreenActionBarStyle=0x7f060005;
-        public static final int FullscreenTheme=0x7f060002;
+        public static final int AppTheme=0x7f070001;
+        public static final int ButtonBar=0x7f070003;
+        public static final int ButtonBarButton=0x7f070004;
+        public static final int FullscreenActionBarStyle=0x7f070005;
+        public static final int FullscreenTheme=0x7f070002;
     }
     public static final class styleable {
         /** 
