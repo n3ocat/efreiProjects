@@ -1,28 +1,26 @@
 package com.efrei.gopizza;
 
-import java.util.ArrayList;
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
+import com.efrei.gopizza.services.GPSTracker;
 import com.example.gopizza.R;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.location.Criteria;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
-import android.location.LocationListener;
 import android.location.LocationManager;
-import android.location.LocationProvider;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 
-public class Mainmenu extends Activity implements LocationListener {
+public class Mainmenu extends Activity {
 
-	private LocationManager lManager;
-    private Location location;
-    
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
@@ -49,39 +47,11 @@ public class Mainmenu extends Activity implements LocationListener {
 
 	}
 	
-	public void Localisation(View view) {
+	public void buttonBottomLeftClick(View view) {
 
-		
-	}
+		startActivity(new Intent(Mainmenu.this, Config.class));
+		finish();
 
-	@Override
-	public void onLocationChanged(Location location) {
-		
-		//Save new position
-		SharedPreferences settings = getSharedPreferences("GoPizzaConf", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putFloat("Longitude",(float)location.getLongitude());
-        editor.putFloat("Latitude",(float)location.getLatitude());
-        editor.commit();
-		
-	}
-
-	@Override
-	public void onStatusChanged(String provider, int status, Bundle extras) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onProviderEnabled(String provider) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onProviderDisabled(String provider) {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
