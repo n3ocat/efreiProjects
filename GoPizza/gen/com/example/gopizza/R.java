@@ -62,11 +62,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int welcome=0x7f020020;
     }
     public static final class id {
-        public static final int ButtonBottomLeft=0x7f080011;
-        public static final int ButtonBottomRight=0x7f080013;
-        public static final int ButtonCenter=0x7f080012;
-        public static final int ButtonTop=0x7f080014;
-        public static final int background=0x7f080010;
+        public static final int ButtonBottomLeft=0x7f080013;
+        public static final int ButtonBottomRight=0x7f080015;
+        public static final int ButtonCenter=0x7f080014;
+        public static final int ButtonTop=0x7f080016;
+        public static final int background=0x7f080012;
+        public static final int editText1=0x7f080010;
+        public static final int editText2=0x7f080011;
         public static final int editTextCity=0x7f080008;
         public static final int editTextLogin=0x7f080004;
         public static final int editTextNameSurname=0x7f080006;
@@ -74,6 +76,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int editTextPostalCode=0x7f080009;
         public static final int editTextStreet=0x7f080007;
         public static final int fullscreen_content=0x7f080000;
+        public static final int imageButton1=0x7f080017;
         public static final int imageButtonLocalisation=0x7f08000a;
         public static final int imageButtonLogin=0x7f08000b;
         public static final int imageButtonLogout=0x7f08000c;
@@ -82,6 +85,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int spinner2=0x7f08000e;
         public static final int spinner3=0x7f08000f;
         public static final int textView=0x7f080003;
+        public static final int textView1=0x7f080018;
         public static final int welcome=0x7f080001;
     }
     public static final class layout {

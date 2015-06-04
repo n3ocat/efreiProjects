@@ -4,12 +4,6 @@
     android:layout_height="match_parent"
     tools:context="com.efrei.gopizza.FullscreenActivity" >
 
-    <!--
-         The primary full-screen view. This can be replaced with whatever view
-         is needed to present your content, e.g. VideoView, SurfaceView,
-         TextureView, etc.
-    -->
-
     <TextView
         android:id="@+id/fullscreen_content"
         android:layout_width="match_parent"
@@ -19,11 +13,6 @@
         android:textColor="#33b5e5"
         android:textSize="50sp"
         android:textStyle="bold" />
-
-    <!--
-         This FrameLayout insets its children based on system windows using
-         android:fitsSystemWindows.
-    -->
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -37,16 +26,24 @@
             android:scaleType="fitXY"
             android:src="@drawable/pizzamenu" />
 
-<!--         <LinearLayout
-            android:id="@+id/fullscreen_content_controls"
-            style="?metaButtonBarStyle"
-            android:layout_width="match_parent"
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:background="@color/black_overlay"
-            android:orientation="horizontal"
-            tools:ignore="UselessParent" >
-        </LinearLayout> -->
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="140dp"
+            android:background="@null"
+            android:src="@drawable/reine" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="380dp"
+            android:text="Reine"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black_overlay" />
 
     </FrameLayout>
 

@@ -57,7 +57,7 @@ public class Config extends Activity {
 
 			try {
 
-				// addresses = geocoder.getFromLocation(latitude, longitude, 1);
+				 //addresses = geocoder.getFromLocation(latitude, longitude, 1);
 				addresses = geocoder.getFromLocation(longitude, latitude, 1);
 
 				String address = addresses.get(0).getAddressLine(0);
