@@ -26,8 +26,8 @@
             android:scaleType="fitXY"
             android:src="@drawable/pizzamenu" />
 
-        <ImageButton
-            android:id="@+id/imageButton1"
+        <ImageView
+            android:id="@+id/pizzaSwap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -44,6 +44,11 @@
             android:text="Reine"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/black_overlay" />
+
+        <Gallery
+            android:id="@+id/gallery1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </FrameLayout>
 

@@ -76,10 +76,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int editTextPostalCode=0x7f080009;
         public static final int editTextStreet=0x7f080007;
         public static final int fullscreen_content=0x7f080000;
-        public static final int imageButton1=0x7f080017;
+        public static final int gallery1=0x7f080019;
         public static final int imageButtonLocalisation=0x7f08000a;
         public static final int imageButtonLogin=0x7f08000b;
         public static final int imageButtonLogout=0x7f08000c;
+        public static final int pizzaSwap=0x7f080017;
         public static final int progressBar=0x7f080002;
         public static final int spinner1=0x7f08000d;
         public static final int spinner2=0x7f08000e;
