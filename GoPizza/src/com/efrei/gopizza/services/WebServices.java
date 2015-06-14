@@ -17,7 +17,7 @@ public class WebServices {
 	public static void main(String args[]) {
 		
 		WebServices ws = new WebServices();
-		String result = ws.requestContent("48.7991088, 2.3649322");
+		String result = ws.requestContent("http://api.gopizza.ninja/pizzas");
 		
 		if (result!=null) {
 			System.out.println("RESULT WS OK : " + result);
@@ -31,24 +31,24 @@ public class WebServices {
 		} else {
 			System.out.println("PARSEUR JSON KO");
 		}
-		
-		System.out.println("Liste disponibilite : ");
-
-		for(int i = 0; i < PizzasHandler.disponibilityPizzaList.size(); i++) {
-		  System.out.println(PizzasHandler.disponibilityPizzaList.get(i));
-		}
-		
-		System.out.println("Liste prix : ");
-		
-		for(int i = 0; i < PizzasHandler.pricePizzaList.size(); i++) {
-			  System.out.println(PizzasHandler.pricePizzaList.get(i));
-		}
-		
-		System.out.println("Liste qualite : ");
-		
-		for(int i = 0; i < PizzasHandler.qualityPizzaList.size(); i++) {
-			  System.out.println(PizzasHandler.qualityPizzaList.get(i));
-		}
+//		
+//		System.out.println("Liste disponibilite : ");
+//
+//		for(int i = 0; i < PizzasHandler.disponibilityPizzaList.size(); i++) {
+//		  System.out.println(PizzasHandler.disponibilityPizzaList.get(i));
+//		}
+//		
+//		System.out.println("Liste prix : ");
+//		
+//		for(int i = 0; i < PizzasHandler.pricePizzaList.size(); i++) {
+//			  System.out.println(PizzasHandler.pricePizzaList.get(i));
+//		}
+//		
+//		System.out.println("Liste qualite : ");
+//		
+//		for(int i = 0; i < PizzasHandler.qualityPizzaList.size(); i++) {
+//			  System.out.println(PizzasHandler.qualityPizzaList.get(i));
+//		}
 		
 	}
 

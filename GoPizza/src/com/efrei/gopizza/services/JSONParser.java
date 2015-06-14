@@ -28,7 +28,6 @@ public class JSONParser {
 						pizzaObject.getInt("d"),
 						pizzaObject.getInt("p"),
 						pizzaObject.getInt("q"));
-				
 			
 				PizzasHandler.disponibilityPizzaList.add(pizza);
 			
@@ -43,8 +42,7 @@ public class JSONParser {
 						pizzaObject.getInt("d"),
 						pizzaObject.getInt("p"),
 						pizzaObject.getInt("q"));
-				
-			
+							
 				PizzasHandler.pricePizzaList.add(pizza);
 			
 			}
@@ -58,8 +56,7 @@ public class JSONParser {
 						pizzaObject.getInt("d"),
 						pizzaObject.getInt("p"),
 						pizzaObject.getInt("q"));
-				
-			
+
 				PizzasHandler.qualityPizzaList.add(pizza);	
 				
 			}

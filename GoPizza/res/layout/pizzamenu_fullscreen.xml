@@ -24,7 +24,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="fitXY"
-            android:src="@drawable/pizzamenu" />
+            android:src="@drawable/background" />
+        
+        <Button
+            android:id="@+id/priceFiter"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="350dp"
+            android:alpha="100"
+            android:background="@drawable/euro"
+            android:text="Button"
+            android:onClick="buttonBottomLeftClick" />
+        
+        <Button
+            android:id="@+id/qualityFilter"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="350dp"
+            android:alpha="0"
+            android:background="@drawable/quality"
+            android:text="Button"
+            android:onClick="buttonBottomLeftClick" />
 
         <ImageView
             android:id="@+id/pizzaSwap"
@@ -45,10 +67,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/black_overlay" />
 
-        <Gallery
-            android:id="@+id/gallery1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/dispoFilter"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="350dp"
+            android:alpha="0"
+            android:background="@drawable/proximity"
+            android:onClick="buttonBottomLeftClick"
+            android:text="Button" />
 
     </FrameLayout>
 
