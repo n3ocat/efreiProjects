@@ -18,66 +18,184 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true" >
-        
+
         <ImageView
             android:id="@+id/welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="fitXY"
             android:src="@drawable/background" />
-        
-        <Button
-            android:id="@+id/priceFiter"
-            android:layout_width="125dp"
-            android:layout_height="125dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="350dp"
-            android:alpha="100"
-            android:background="@drawable/euro"
-            android:text="Button"
-            android:onClick="buttonBottomLeftClick" />
-        
-        <Button
-            android:id="@+id/qualityFilter"
-            android:layout_width="125dp"
-            android:layout_height="125dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="350dp"
-            android:alpha="0"
-            android:background="@drawable/quality"
-            android:text="Button"
-            android:onClick="buttonBottomLeftClick" />
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/dispoFilter"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/proximityon" />
+
+        <ImageButton
+            android:id="@+id/priceFiter"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="145dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/euro" />
+
+        <ImageButton
+            android:id="@+id/qualityFilter"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="275dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/quality" />
+
+        <ImageButton
+            android:id="@+id/swipeLeft"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="275dp"
+            android:background="@drawable/swipeleft" />
+
+        <ImageButton
+            android:id="@+id/swipeRight"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="275dp"
+            android:background="@drawable/swiperight" />
+
+        <ImageButton
             android:id="@+id/pizzaSwap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="140dp"
-            android:background="@null"
-            android:src="@drawable/reine" />
+            android:background="@null" />
 
-        <TextView
-            android:id="@+id/textView1"
+        <ImageButton
+            android:id="@+id/smallPizza"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="440dp"
+            android:background="@drawable/pizza" />
+
+        <ImageButton
+            android:id="@+id/mediumPizza"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="435dp"
+            android:background="@drawable/pizzaon" />
+
+        <ImageButton
+            android:id="@+id/largePizza"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="225dp"
+            android:layout_marginTop="430dp"
+            android:background="@drawable/pizza" />
+
+        <ImageButton
+            android:id="@+id/bin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="530dp"
+            android:background="@drawable/bin" />
+
+        <ImageButton
+            android:id="@+id/next"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="155dp"
+            android:layout_marginTop="530dp"
+            android:background="@drawable/next" />
+
+        <ImageButton
+            android:id="@+id/order"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="530dp"
+            android:background="@drawable/pizzabox" />
+
+        <EditText
+            android:id="@+id/EditTextPizzaName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="380dp"
+            android:clickable="false"
+            android:editable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="numberDecimal"
+            android:longClickable="false"
             android:text="Reine"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/black_overlay" />
 
-        <Button
-            android:id="@+id/dispoFilter"
-            android:layout_width="125dp"
-            android:layout_height="125dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="350dp"
-            android:alpha="0"
-            android:background="@drawable/proximity"
-            android:onClick="buttonBottomLeftClick"
-            android:text="Button" />
+        <EditText
+            android:id="@+id/EditTextProximity"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="90dp"
+            android:clickable="false"
+            android:editable="false"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="numberDecimal"
+            android:longClickable="false" />
 
+        <EditText
+            android:id="@+id/EditTextPrice"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="157dp"
+            android:layout_marginTop="90dp"
+            android:clickable="false"
+            android:editable="false"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="numberDecimal"
+            android:longClickable="false" />
+
+        <EditText
+            android:id="@+id/EditTextQuality"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="287dp"
+            android:layout_marginTop="90dp"
+            android:clickable="false"
+            android:editable="false"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="numberDecimal"
+            android:longClickable="false" />
+        
+         <EditText
+             android:id="@+id/EditTextOrderedPizza"
+             android:layout_width="35dp"
+             android:layout_height="40dp"
+             android:layout_marginLeft="260dp"
+             android:layout_marginTop="535dp"
+             android:clickable="false"
+             android:editable="false"
+             android:ems="10"
+             android:focusable="false"
+             android:focusableInTouchMode="false"
+             android:inputType="numberDecimal"
+             android:longClickable="false"
+             android:text="0" />
+        
     </FrameLayout>
 
 </FrameLayout>
