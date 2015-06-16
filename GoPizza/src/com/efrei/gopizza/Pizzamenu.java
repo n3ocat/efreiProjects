@@ -15,14 +15,15 @@ import android.widget.ImageButton;
 
 public class Pizzamenu extends Activity {
 	
-	ImageButton buttonDispoFilter, buttonPriceFilter, buttonQualityFilter, buttonSwipeLeft, buttonSwipeRight, buttonPizzaSwipe, buttonSmallPizza, buttonMediumPizza, buttonLargePizza, buttonBin, buttonNext, buttonOrder;
-	Boolean buttonDispoFilterOn = true, buttonPriceFilterOn = false, buttonQualityFilterOn = false, buttonSmallPizzaOn = false, buttonMediumPizzaOn = true, buttonLargePizzaOn = false;
-	boolean forestiereVerbose = false, margheritaVerbose = false, quatrefromagesVerbose = false, reineVerbose = false, saumonetaVerbose = false, indienneVerbose = false, savoyardeVerbose = false, cannibaleVerbose = false, orientaleVerbose = false;
-	EditText textPizzaName, textProximity, textPrice, textQuality, textOrderedPizza;
-	ArrayList<Pizzas> pizzaList = new ArrayList<Pizzas>();
-	ArrayList<Pizzas> pizzaOrderedList = new ArrayList<Pizzas>();
-	int actualPizza = 0;
-	int maxPizza = 8;
+	private ImageButton buttonDispoFilter, buttonPriceFilter, buttonQualityFilter, buttonSwipeLeft, buttonSwipeRight, buttonPizzaSwipe, buttonSmallPizza, buttonMediumPizza, buttonLargePizza, buttonBin, buttonNext, buttonOrder;
+	private Boolean buttonDispoFilterOn = true, buttonPriceFilterOn = false, buttonQualityFilterOn = false, buttonSmallPizzaOn = false, buttonMediumPizzaOn = true, buttonLargePizzaOn = false;
+	private boolean forestiereVerbose = false, margheritaVerbose = false, quatrefromagesVerbose = false, reineVerbose = false, saumonetaVerbose = false, indienneVerbose = false, savoyardeVerbose = false, cannibaleVerbose = false, orientaleVerbose = false;
+	private EditText textPizzaName, textProximity, textPrice, textQuality, textOrderedPizza;
+	private ArrayList<Pizzas> pizzaList = new ArrayList<Pizzas>();
+	static public ArrayList<Pizzas> pizzaOrderedList = new ArrayList<Pizzas>();
+	private int actualPizza = 0, maxPizza = 8;
+	
+	Pizzas forestiere, margherita, quatrefromage, reine, saumoneta, indienne, savoyarde, cannibale, orientale;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,15 +35,15 @@ public class Pizzamenu extends Activity {
 
 		setContentView(R.layout.pizzamenu_fullscreen);
 		
-		Pizzas forestiere = new Pizzas(R.drawable.forestiere, "forestiere", 5, 8, 4);
-		Pizzas margherita = new Pizzas(R.drawable.margherita, "margherita", 5, 7, 2);
-		Pizzas quatrefromage = new Pizzas(R.drawable.quatrefromages, "quatrefromages", 6, 9, 4);
-		Pizzas reine = new Pizzas(R.drawable.reine, "reine", 6, 9, 5);
-		Pizzas saumoneta = new Pizzas(R.drawable.saumoneta, "saumoneta", 7, 11, 3);
-		Pizzas indienne = new Pizzas(R.drawable.indienne, "indienne", 7, 9, 3);
-		Pizzas savoyarde = new Pizzas(R.drawable.savoyarde, "savoyarde", 8, 12, 4);
-		Pizzas cannibale = new Pizzas(R.drawable.cannibale, "cannibale", 10, 11, 3);
-		Pizzas orientale = new Pizzas(R.drawable.orientale, "orientale", 12, 10, 2);
+		forestiere = new Pizzas(R.drawable.forestiere, "Forestiere", 5, 8, 4);
+		margherita = new Pizzas(R.drawable.margherita, "Margherita", 5, 7, 2);
+		quatrefromage = new Pizzas(R.drawable.quatrefromages, "Quatre fromages", 6, 9, 4);
+		reine = new Pizzas(R.drawable.reine, "Reine", 6, 9, 5);
+		saumoneta = new Pizzas(R.drawable.saumoneta, "Saumoneta", 7, 11, 3);
+		indienne = new Pizzas(R.drawable.indienne, "Indienne", 7, 9, 3);
+		savoyarde = new Pizzas(R.drawable.savoyarde, "Savoyarde", 8, 12, 4);
+		cannibale = new Pizzas(R.drawable.cannibale, "Cannibale", 10, 11, 3);
+		orientale = new Pizzas(R.drawable.orientale, "Orientale", 12, 10, 2);
 		
 		pizzaList.add(forestiere);
 		pizzaList.add(margherita);
@@ -97,6 +98,8 @@ public class Pizzamenu extends Activity {
 		textQuality = (EditText)findViewById(R.id.EditTextQuality);
 		textOrderedPizza = (EditText)findViewById(R.id.EditTextOrderedPizza);
 		
+		textOrderedPizza.setText("0");
+		
 		proximityPriceQualitySynchronize();
 
 	}
@@ -114,16 +117,6 @@ public class Pizzamenu extends Activity {
 			} 
 	    	
 	    	pizzaList.removeAll(pizzaList);
-	    	
-			Pizzas forestiere = new Pizzas(R.drawable.forestiere, "forestiere", 5, 8, 4);
-			Pizzas margherita = new Pizzas(R.drawable.margherita, "margherita", 5, 7, 2);
-			Pizzas quatrefromage = new Pizzas(R.drawable.quatrefromages, "quatrefromages", 6, 9, 4);
-			Pizzas reine = new Pizzas(R.drawable.reine, "reine", 6, 9, 5);
-			Pizzas saumoneta = new Pizzas(R.drawable.saumoneta, "saumoneta", 7, 11, 3);
-			Pizzas indienne = new Pizzas(R.drawable.indienne, "indienne", 7, 9, 3);
-			Pizzas savoyarde = new Pizzas(R.drawable.savoyarde, "savoyarde", 8, 12, 4);
-			Pizzas cannibale = new Pizzas(R.drawable.cannibale, "cannibale", 10, 11, 3);
-			Pizzas orientale = new Pizzas(R.drawable.orientale, "orientale", 12, 10, 2);
 			
 			pizzaList.add(forestiere);
 			pizzaList.add(margherita);
@@ -160,16 +153,6 @@ public class Pizzamenu extends Activity {
 	    	
 	    	pizzaList.removeAll(pizzaList);
 	    	
-			Pizzas margherita = new Pizzas(R.drawable.margherita, "margherita", 5, 7, 2);
-			Pizzas forestiere = new Pizzas(R.drawable.forestiere, "forestiere", 5, 8, 4);
-			Pizzas quatrefromage = new Pizzas(R.drawable.quatrefromages, "quatrefromages", 6, 9, 4);
-			Pizzas reine = new Pizzas(R.drawable.reine, "reine", 6, 9, 5);
-			Pizzas indienne = new Pizzas(R.drawable.indienne, "indienne", 7, 9, 3);
-			Pizzas orientale = new Pizzas(R.drawable.orientale, "orientale", 12, 10, 2);
-			Pizzas saumoneta = new Pizzas(R.drawable.saumoneta, "saumoneta", 7, 11, 3);
-			Pizzas cannibale = new Pizzas(R.drawable.cannibale, "cannibale", 10, 11, 3);
-			Pizzas savoyarde = new Pizzas(R.drawable.savoyarde, "savoyarde", 8, 12, 4);
-	    	
 			pizzaList.add(margherita);
 			pizzaList.add(forestiere);
 			pizzaList.add(quatrefromage);
@@ -204,16 +187,6 @@ public class Pizzamenu extends Activity {
 			} 
 	    	
 	    	pizzaList.removeAll(pizzaList);
-	    	
-			Pizzas reine = new Pizzas(R.drawable.reine, "reine", 6, 9, 5);
-			Pizzas quatrefromage = new Pizzas(R.drawable.quatrefromages, "quatrefromages", 6, 9, 4);
-			Pizzas forestiere = new Pizzas(R.drawable.forestiere, "forestiere", 5, 8, 4);
-			Pizzas savoyarde = new Pizzas(R.drawable.savoyarde, "savoyarde", 8, 12, 4);
-			Pizzas saumoneta = new Pizzas(R.drawable.saumoneta, "saumoneta", 7, 11, 3);
-			Pizzas indienne = new Pizzas(R.drawable.indienne, "indienne", 7, 9, 3);
-			Pizzas cannibale = new Pizzas(R.drawable.cannibale, "cannibale", 10, 11, 3);
-			Pizzas orientale = new Pizzas(R.drawable.orientale, "orientale", 12, 10, 2);
-			Pizzas margherita = new Pizzas(R.drawable.margherita, "margherita", 5, 7, 2);
 		    
 			pizzaList.add(reine);
 			pizzaList.add(quatrefromage);
@@ -241,7 +214,7 @@ public class Pizzamenu extends Activity {
 	    public void onClick(View v) {
 	    	
 	    	actualPizza--;
-			if(actualPizza <= 0) {
+			if(actualPizza < 0) {
 				actualPizza = maxPizza;
 			}
 			
@@ -357,8 +330,14 @@ public class Pizzamenu extends Activity {
 
 	    public void onClick(View v) {
 	    	
-	    	
-	    	
+	    	if (pizzaOrderedList.isEmpty()) {
+				
+			} else {
+				
+		    	startActivity(new Intent(Pizzamenu.this, Order.class));
+				
+			}
+
 	    }
 	    
 	};
