@@ -56,6 +56,15 @@
         </activity>
         
         <activity
+            android:name="com.efrei.gopizza.Payment"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" 
+            android:largeHeap="true" >
+        </activity>
+        
+        <activity
             android:name="com.efrei.gopizza.Info"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"

@@ -27,7 +27,7 @@ public class JSONParser {
 						pizzaObject.getString("n"), 
 						pizzaObject.getInt("d"),
 						pizzaObject.getInt("p"),
-						pizzaObject.getInt("q"));
+						pizzaObject.getString("q"));
 			
 				PizzasHandler.disponibilityPizzaList.add(pizza);
 			
@@ -41,7 +41,7 @@ public class JSONParser {
 						pizzaObject.getString("n"), 
 						pizzaObject.getInt("d"),
 						pizzaObject.getInt("p"),
-						pizzaObject.getInt("q"));
+						pizzaObject.getString("q"));
 							
 				PizzasHandler.pricePizzaList.add(pizza);
 			
@@ -55,7 +55,7 @@ public class JSONParser {
 						pizzaObject.getString("n"), 
 						pizzaObject.getInt("d"),
 						pizzaObject.getInt("p"),
-						pizzaObject.getInt("q"));
+						pizzaObject.getString("q"));
 
 				PizzasHandler.qualityPizzaList.add(pizza);	
 				

@@ -2,10 +2,10 @@ package com.efrei.gopizza.services;
 
 public class Pizzas {
 	
-	private int id, disponibility, price, quality;
-	private String name;
+	private int id, disponibility, price;
+	private String name, quality;
 	
-	public Pizzas(int i, String n, int d, int p, int q) {
+	public Pizzas(int i, String n, int d, int p, String q) {
 		
 		id = i;
 		name = n;
@@ -27,7 +27,7 @@ public class Pizzas {
 		return price;
 	}
 
-	public int getQuality() {
+	public String getQuality() {
 		return quality;
 	}
 

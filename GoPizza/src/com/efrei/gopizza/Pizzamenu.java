@@ -35,15 +35,15 @@ public class Pizzamenu extends Activity {
 
 		setContentView(R.layout.pizzamenu_fullscreen);
 		
-		forestiere = new Pizzas(R.drawable.forestiere, "Forestiere", 5, 8, 4);
-		margherita = new Pizzas(R.drawable.margherita, "Margherita", 5, 7, 2);
-		quatrefromage = new Pizzas(R.drawable.quatrefromages, "Quatre fromages", 6, 9, 4);
-		reine = new Pizzas(R.drawable.reine, "Reine", 6, 9, 5);
-		saumoneta = new Pizzas(R.drawable.saumoneta, "Saumoneta", 7, 11, 3);
-		indienne = new Pizzas(R.drawable.indienne, "Indienne", 7, 9, 3);
-		savoyarde = new Pizzas(R.drawable.savoyarde, "Savoyarde", 8, 12, 4);
-		cannibale = new Pizzas(R.drawable.cannibale, "Cannibale", 10, 11, 3);
-		orientale = new Pizzas(R.drawable.orientale, "Orientale", 12, 10, 2);
+		forestiere = new Pizzas(R.drawable.forestiere, "Forestiere", 5, 8, "4/5");
+		margherita = new Pizzas(R.drawable.margherita, "Margherita", 5, 7, "2/5");
+		quatrefromage = new Pizzas(R.drawable.quatrefromages, "Quatre fromages", 6, 9, "4/5");
+		reine = new Pizzas(R.drawable.reine, "Reine", 6, 9, "5/5");
+		saumoneta = new Pizzas(R.drawable.saumoneta, "Saumoneta", 7, 11, "3/5");
+		indienne = new Pizzas(R.drawable.indienne, "Indienne", 7, 9, "3/5");
+		savoyarde = new Pizzas(R.drawable.savoyarde, "Savoyarde", 8, 12, "4/5");
+		cannibale = new Pizzas(R.drawable.cannibale, "Cannibale", 10, 11, "3/5");
+		orientale = new Pizzas(R.drawable.orientale, "Orientale", 12, 10, "2/5");
 		
 		pizzaList.add(forestiere);
 		pizzaList.add(margherita);
@@ -98,7 +98,11 @@ public class Pizzamenu extends Activity {
 		textQuality = (EditText)findViewById(R.id.EditTextQuality);
 		textOrderedPizza = (EditText)findViewById(R.id.EditTextOrderedPizza);
 		
-		textOrderedPizza.setText("0");
+		if (pizzaOrderedList.isEmpty()) {
+			textOrderedPizza.setText("0");
+		} else {
+			textOrderedPizza.setText("" + pizzaOrderedList.size());
+		}
 		
 		proximityPriceQualitySynchronize();
 
@@ -350,7 +354,40 @@ public class Pizzamenu extends Activity {
 	    		
 	    	} else {
 	    		
-		    	pizzaOrderedList.add(pizzaList.get(actualPizza));
+	    		Pizzas orderedPizza;
+	    		
+	    		if (buttonSmallPizzaOn) {
+					
+	    			orderedPizza = new Pizzas(pizzaList.get(actualPizza).getId(),
+	    					pizzaList.get(actualPizza).getName() + " Small",
+	    					pizzaList.get(actualPizza).getDisponibility(),
+	    					pizzaList.get(actualPizza).getPrice() - 1,
+	    					pizzaList.get(actualPizza).getQuality());
+	    			
+	    			pizzaOrderedList.add(orderedPizza);
+	    			
+				} else if(buttonLargePizzaOn) {
+					
+					orderedPizza = new Pizzas(pizzaList.get(actualPizza).getId(),
+	    					pizzaList.get(actualPizza).getName() + " Large",
+	    					pizzaList.get(actualPizza).getDisponibility(),
+	    					pizzaList.get(actualPizza).getPrice() + 2,
+	    					pizzaList.get(actualPizza).getQuality());
+	    			
+	    			pizzaOrderedList.add(orderedPizza);
+					
+				} else {
+					
+					orderedPizza = new Pizzas(pizzaList.get(actualPizza).getId(),
+	    					pizzaList.get(actualPizza).getName() + " Medium",
+	    					pizzaList.get(actualPizza).getDisponibility(),
+	    					pizzaList.get(actualPizza).getPrice(),
+	    					pizzaList.get(actualPizza).getQuality());
+	    			
+	    			pizzaOrderedList.add(orderedPizza);
+					
+				}
+	    		
 		    	textOrderedPizza.setText("" + pizzaOrderedList.size());
 	    		
 	    	}
@@ -365,7 +402,7 @@ public class Pizzamenu extends Activity {
 	    	
 	    	switch (pizzaList.get(actualPizza).getName()) {
 	    	
-			case "forestiere":
+			case "Forestiere":
 				
 				forestiereVerbose = !forestiereVerbose;
 				if (forestiereVerbose) {
@@ -376,7 +413,7 @@ public class Pizzamenu extends Activity {
 				
 				break;
 	    	
-		    case "margherita":
+		    case "Margherita":
 				
 		    	margheritaVerbose = !margheritaVerbose;
 				if (margheritaVerbose) {
@@ -387,7 +424,7 @@ public class Pizzamenu extends Activity {
 				
 				break;
 
-			case "quatrefromages":
+			case "Quatre fromages":
 				
 				quatrefromagesVerbose = !quatrefromagesVerbose;
 				if (quatrefromagesVerbose) {
@@ -398,7 +435,7 @@ public class Pizzamenu extends Activity {
 				
 				break;
 	
-			case "reine":
+			case "Reine":
 				
 				reineVerbose = !reineVerbose;
 				if (reineVerbose) {
@@ -409,7 +446,7 @@ public class Pizzamenu extends Activity {
 				
 				break;
 			
-			case "saumoneta":
+			case "Saumoneta":
 				
 				saumonetaVerbose = !saumonetaVerbose;
 				if (saumonetaVerbose) {
@@ -420,7 +457,7 @@ public class Pizzamenu extends Activity {
 				
 				break;
 			
-			case "indienne":
+			case "Indienne":
 							
 				indienneVerbose = !indienneVerbose;
 				if (indienneVerbose) {
@@ -431,7 +468,7 @@ public class Pizzamenu extends Activity {
 				
 				break;
 					
-			case "savoyarde":
+			case "Savoyarde":
 				
 				savoyardeVerbose = !savoyardeVerbose;
 				if (savoyardeVerbose) {
@@ -442,7 +479,7 @@ public class Pizzamenu extends Activity {
 				
 				break;
 						
-			case "cannibale":
+			case "Cannibale":
 				
 				cannibaleVerbose = !cannibaleVerbose;
 				if (cannibaleVerbose) {
@@ -453,7 +490,7 @@ public class Pizzamenu extends Activity {
 				
 				break;
 						
-			case "orientale":
+			case "Orientale":
 				
 				orientaleVerbose = !orientaleVerbose;
 				if (orientaleVerbose) {
@@ -465,10 +502,6 @@ public class Pizzamenu extends Activity {
 				break;
 				
 			}
-	    	
-	    }
-	    
-	    public void verboseMode(String drawable) {
 	    	
 	    }
 	    

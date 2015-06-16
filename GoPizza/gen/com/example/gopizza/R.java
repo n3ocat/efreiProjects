@@ -142,7 +142,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int info_fullscreen=0x7f030002;
         public static final int mainmenu_fullscreen=0x7f030003;
         public static final int order_fullscreen=0x7f030004;
-        public static final int pizzamenu_fullscreen=0x7f030005;
+        public static final int payment_fullscreen=0x7f030005;
+        public static final int pizzamenu_fullscreen=0x7f030006;
     }
     public static final class string {
         public static final int app_name=0x7f050000;
