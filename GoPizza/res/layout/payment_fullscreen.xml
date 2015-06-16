@@ -25,6 +25,46 @@
             android:layout_height="wrap_content"
             android:scaleType="fitXY"
             android:src="@drawable/background" />
+
+        <TextView
+            android:id="@+id/TextViewQRCode1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:clickable="false"
+            android:editable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="numberDecimal"
+            android:longClickable="false"
+            android:text="ATTENTION : Voici votre QR code !"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black_overlay" />
+
+        <TextView
+            android:id="@+id/TextViewQRCode2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:clickable="false"
+            android:editable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="numberDecimal"
+            android:longClickable="false"
+            android:text="Il vous sera demandé par votre livreur."
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black_overlay"
+            android:textSize="20sp" />
+        
+        <ImageButton
+            android:id="@+id/qrcode"
+            android:layout_width="256dp"
+            android:layout_height="256dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="85dp" />
         
     </FrameLayout>
 
