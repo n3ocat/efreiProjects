@@ -14,9 +14,9 @@ public class Order extends Activity {
 	
 	private ImageButton bin1, bin2, bin3, bin4, bin5, bin6, bin7, bin8, bin9, buttonNext;
 	private EditText pizza1, pizza2, pizza3, pizza4, pizza5, pizza6, pizza7, pizza8, pizza9, total;
-	
-	private int pizzasOrdered, totalOrder;
-	
+	private int pizzasOrdered;
+	public static int totalOrder = 0;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 

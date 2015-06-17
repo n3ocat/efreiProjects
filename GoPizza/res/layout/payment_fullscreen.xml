@@ -65,6 +65,15 @@
             android:layout_height="256dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="85dp" />
+
+        <Button
+            android:id="@+id/paymentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="500dp"
+            android:text="Payer" 
+            android:onClick="onBuyPressed" />
         
     </FrameLayout>
 
