@@ -81,8 +81,8 @@
             android:id="@+id/imageButtonLocalisation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="155dp"
-            android:layout_marginTop="110dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="120dp"
             android:background="@null"
             android:onClick="localisation"
             android:src="@drawable/localisation" />
@@ -145,6 +145,16 @@
             android:ems="10"
             android:inputType="phone"
             android:text="Phone number" />
+
+        <ImageButton
+            android:id="@+id/imageButtonAddUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="120dp"
+            android:background="@null"
+            android:onClick="addUser"
+            android:src="@drawable/adduser" />
         
     </FrameLayout>
 

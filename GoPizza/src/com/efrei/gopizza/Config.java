@@ -8,6 +8,8 @@ import com.efrei.gopizza.services.GPSTracker;
 import com.example.gopizza.R;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
@@ -64,6 +66,17 @@ public class Config extends Activity {
 			
 			Log.d("Mainmenu", "Successful login");
 			
+			new AlertDialog.Builder(this)
+			.setTitle("Connexion")
+		    .setMessage("Successful login =)")
+		    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+		        public void onClick(DialogInterface dialog, int which) { 
+		            // continue with delete
+		        }
+		     })
+		    .setIcon(android.R.drawable.ic_dialog_alert)
+		    .show();
+			
 			nameSurname.setText("Romain COURTIEUX");
 			street.setText("7 Rue des charmes");
 			city.setText("Thiais");
@@ -76,7 +89,19 @@ public class Config extends Activity {
 			
 		} else {
 			
+
 			Log.d("Mainmenu", "Unsuccessful login");
+			
+			new AlertDialog.Builder(this)
+			.setTitle("Connexion")
+		    .setMessage("Unsuccessful login =(")
+		    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+		        public void onClick(DialogInterface dialog, int which) { 
+		            // continue with delete
+		        }
+		     })
+		    .setIcon(android.R.drawable.ic_dialog_alert)
+		    .show();
 			
 		}
 		

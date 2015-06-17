@@ -139,64 +139,14 @@ public class Payment extends Activity {
 			ButtonGoBack.setEnabled(true);
 			
 			if (!fastMode) {
+				
 				thingToBuy = new PayPalPayment(new BigDecimal(Order.totalOrder),
 						"EUR", "Pizza command", PayPalPayment.PAYMENT_INTENT_SALE);
 			} else {
-				Spinner spinner = (Spinner)findViewById(R.id.spinner1);
-				String text = spinner.getSelectedItem().toString();
-				int price = 1;
+	
+				thingToBuy = new PayPalPayment(new BigDecimal(11),
+						"EUR", "Fast & Furious, pizza : cannibale", PayPalPayment.PAYMENT_INTENT_SALE);
 				
-				switch (text) {
-		    	
-					case "Favorite pizza 1st : Reine": 
-						
-						price = 9;
-						break;
-						
-					case "Favorite pizza 1st : 4Fromages": 
-						
-						price = 9;
-						break;
-										
-					case "Favorite pizza 1st : Margherita": 
-						
-						price = 7;
-						break;
-						
-					case "Favorite pizza 1st : Cannibale": 
-						
-						price = 11;
-						break;
-						
-					case "Favorite pizza 1st : Forestière": 
-						
-						price = 8;
-						break;
-						
-					case "Favorite pizza 1st : Indienne": 
-						
-						price = 9;
-						break;
-						
-					case "Favorite pizza 1st : Orientale": 
-						
-						price = 10;
-						break;
-						
-					case "Favorite pizza 1st : Saumoneta": 
-						
-						price = 11;
-						break;
-						
-					case "Favorite pizza 1st : Savoyarde": 
-						
-						price = 12;
-						break;	
-					
-				}
-					
-				thingToBuy = new PayPalPayment(new BigDecimal(price),
-						"EUR", "Fast & Furious, pizza : " + text, PayPalPayment.PAYMENT_INTENT_SALE);
 			}
 			
 		}
@@ -318,8 +268,17 @@ public class Payment extends Activity {
 	@Override
 	public void onBackPressed() {
 
-		startActivity(new Intent(Payment.this, Order.class));
-		finish();
+		if (fastMode) {
+			
+			startActivity(new Intent(Payment.this, Mainmenu.class));
+			finish();
+			
+		} else {
+			
+			startActivity(new Intent(Payment.this, Order.class));
+			finish();
+			
+		}
 
 	}
 
