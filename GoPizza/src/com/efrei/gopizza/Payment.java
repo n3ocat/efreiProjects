@@ -12,7 +12,10 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Window;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Spinner;
 
 import com.paypal.android.sdk.payments.PayPalAuthorization;
 import com.paypal.android.sdk.payments.PayPalConfiguration;
@@ -22,18 +25,18 @@ import com.paypal.android.sdk.payments.PayPalService;
 import com.paypal.android.sdk.payments.PaymentActivity;
 import com.paypal.android.sdk.payments.PaymentConfirmation;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import org.json.JSONException;
+
 import java.math.BigDecimal;
 
 public class Payment extends Activity {
+	
+	public static boolean fastMode = false;
 
 	private static final String TAG = "paymentExample";
 	/**
@@ -68,6 +71,8 @@ public class Payment extends Activity {
 
 	PayPalPayment thingToBuy;
 
+	private Button PaymentButton, ButtonGoBack;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
@@ -83,7 +88,15 @@ public class Payment extends Activity {
 		Intent intent = new Intent(this, PayPalService.class);
 		intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, config);
 		startService(intent);
-
+		
+		PaymentButton = (Button)findViewById(R.id.paymentButton);
+		ButtonGoBack = (Button)findViewById(R.id.buttonGoBack);
+		
+		ButtonGoBack.setClickable(false);
+		ButtonGoBack.setEnabled(false);
+		
+		ButtonGoBack.setOnClickListener(goBack);
+		
 	}
 
 	public void generateQRCode(String url) {
@@ -116,9 +129,76 @@ public class Payment extends Activity {
 		// authorize payment and
 		// capture funds later.
 
+	
 		if (pressed.getId() == R.id.paymentButton) {
-			thingToBuy = new PayPalPayment(new BigDecimal(Order.totalOrder),
-					"EUR", "Pizza command", PayPalPayment.PAYMENT_INTENT_SALE);
+			
+			PaymentButton.setClickable(false);
+			PaymentButton.setEnabled(false);
+			
+			ButtonGoBack.setClickable(true);
+			ButtonGoBack.setEnabled(true);
+			
+			if (!fastMode) {
+				thingToBuy = new PayPalPayment(new BigDecimal(Order.totalOrder),
+						"EUR", "Pizza command", PayPalPayment.PAYMENT_INTENT_SALE);
+			} else {
+				Spinner spinner = (Spinner)findViewById(R.id.spinner1);
+				String text = spinner.getSelectedItem().toString();
+				int price = 1;
+				
+				switch (text) {
+		    	
+					case "Favorite pizza 1st : Reine": 
+						
+						price = 9;
+						break;
+						
+					case "Favorite pizza 1st : 4Fromages": 
+						
+						price = 9;
+						break;
+										
+					case "Favorite pizza 1st : Margherita": 
+						
+						price = 7;
+						break;
+						
+					case "Favorite pizza 1st : Cannibale": 
+						
+						price = 11;
+						break;
+						
+					case "Favorite pizza 1st : Forestière": 
+						
+						price = 8;
+						break;
+						
+					case "Favorite pizza 1st : Indienne": 
+						
+						price = 9;
+						break;
+						
+					case "Favorite pizza 1st : Orientale": 
+						
+						price = 10;
+						break;
+						
+					case "Favorite pizza 1st : Saumoneta": 
+						
+						price = 11;
+						break;
+						
+					case "Favorite pizza 1st : Savoyarde": 
+						
+						price = 12;
+						break;	
+					
+				}
+					
+				thingToBuy = new PayPalPayment(new BigDecimal(price),
+						"EUR", "Fast & Furious, pizza : " + text, PayPalPayment.PAYMENT_INTENT_SALE);
+			}
+			
 		}
 
 		Intent intent = new Intent(Payment.this, PaymentActivity.class);
@@ -126,6 +206,7 @@ public class Payment extends Activity {
 		intent.putExtra(PaymentActivity.EXTRA_PAYMENT, thingToBuy);
 
 		startActivityForResult(intent, REQUEST_CODE_PAYMENT);
+		
 	}
 
 	public void onFuturePaymentPressed(View pressed) {
@@ -214,6 +295,18 @@ public class Payment extends Activity {
 				"App Correlation ID received from SDK", Toast.LENGTH_LONG)
 				.show();
 	}
+	
+	View.OnClickListener goBack = new View.OnClickListener() {
+
+	    public void onClick(View v) {
+	    	
+	    	Pizzamenu.pizzaOrderedList.clear();
+	    	startActivity(new Intent(Payment.this, Mainmenu.class));
+	    	finish();
+	    	
+	    }
+	    
+	};
 
 	@Override
 	public void onDestroy() {

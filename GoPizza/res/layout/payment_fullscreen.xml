@@ -30,7 +30,7 @@
             android:id="@+id/TextViewQRCode1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
             android:clickable="false"
             android:editable="false"
@@ -38,7 +38,7 @@
             android:focusableInTouchMode="false"
             android:inputType="numberDecimal"
             android:longClickable="false"
-            android:text="ATTENTION : Voici votre QR code !"
+            android:text="WARNING: This is your QR code!"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/black_overlay" />
 
@@ -46,7 +46,7 @@
             android:id="@+id/TextViewQRCode2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="40dp"
             android:clickable="false"
             android:editable="false"
@@ -54,7 +54,7 @@
             android:focusableInTouchMode="false"
             android:inputType="numberDecimal"
             android:longClickable="false"
-            android:text="Il vous sera demandé par votre livreur."
+            android:text="Screen it, your delivery will ask for it."
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/black_overlay"
             android:textSize="20sp" />
@@ -71,9 +71,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="400dp"
+            android:onClick="onBuyPressed"
+            android:text="Pay" />
+
+        <Button
+            android:id="@+id/buttonGoBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="500dp"
-            android:text="Payer" 
-            android:onClick="onBuyPressed" />
+            android:onClick="onBuyPressed"
+            android:text="Main menu" />
         
     </FrameLayout>
 

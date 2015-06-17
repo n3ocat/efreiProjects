@@ -178,7 +178,7 @@
             android:focusableInTouchMode="false"
             android:inputType="numberDecimal"
             android:longClickable="false"
-            android:text="Récapitulatif de la commande :"
+            android:text="Order summary"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/black_overlay" />
         

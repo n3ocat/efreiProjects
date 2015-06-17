@@ -22,6 +22,14 @@ public class Mainmenu extends Activity {
 
 	}
 
+	public void fastPizza(View pressed) {
+		
+		Payment.fastMode = true;
+		startActivity(new Intent(Mainmenu.this, Payment.class));
+		finish();
+		
+	}
+	
 	public void buttonTopClick(View view) {
 
 		startActivity(new Intent(Mainmenu.this, Pizzamenu.class));

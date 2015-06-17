@@ -66,7 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="280dp"
             android:ems="10"
-            android:text="City..." />
+            android:text="City ..." />
 
         <EditText
             android:id="@+id/editTextPostalCode"
@@ -129,19 +129,16 @@
             android:entries="@array/pizzaList3" />
 
         <EditText
-            android:id="@+id/editTextQuality"
+            android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="330dp"
             android:ems="10"
             android:inputType="textEmailAddress"
-            android:text="Email" >
-
-            <requestFocus />
-        </EditText>
+            android:text="Email" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/editTextPhoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="380dp"

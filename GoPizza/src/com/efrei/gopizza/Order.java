@@ -32,6 +32,7 @@ public class Order extends Activity {
 		buttonNext = (ImageButton)findViewById(R.id.next);
 		buttonNext.setOnClickListener(nextButtonHandler);
 		
+		totalOrder = 0;
 		for (int i = 0; i < Pizzamenu.pizzaOrderedList.size(); i++) {
 			totalOrder += Pizzamenu.pizzaOrderedList.get(i).getPrice();
 		}
@@ -302,9 +303,19 @@ public class Order extends Activity {
 	    public void onClick(View v) {
 	    	
 	    	Pizzamenu.pizzaOrderedList.remove(0);
-	    	startActivity(new Intent(Order.this, Order.class));
-	    	finish();
-			
+	    	
+	    	if (Pizzamenu.pizzaOrderedList.isEmpty()) {
+				
+	    		startActivity(new Intent(Order.this, Pizzamenu.class));
+		    	finish();
+	    		
+			} else {
+				
+		    	startActivity(new Intent(Order.this, Order.class));
+		    	finish();
+				
+			}
+	    	
 	    }
 	    
 	};
@@ -314,8 +325,18 @@ public class Order extends Activity {
 	    public void onClick(View v) {
 	    	
 	    	Pizzamenu.pizzaOrderedList.remove(1);
-	    	startActivity(new Intent(Order.this, Order.class));
-	    	finish();
+	    	
+	    	if (Pizzamenu.pizzaOrderedList.isEmpty()) {
+				
+	    		startActivity(new Intent(Order.this, Pizzamenu.class));
+		    	finish();
+	    		
+			} else {
+				
+		    	startActivity(new Intent(Order.this, Order.class));
+		    	finish();
+				
+			}
 	    	
 	    }
 	    
@@ -326,8 +347,18 @@ public class Order extends Activity {
 	    public void onClick(View v) {
 	    	
 	    	Pizzamenu.pizzaOrderedList.remove(2);
-	    	startActivity(new Intent(Order.this, Order.class));
-	    	finish();
+	    	
+	    	if (Pizzamenu.pizzaOrderedList.isEmpty()) {
+				
+	    		startActivity(new Intent(Order.this, Pizzamenu.class));
+		    	finish();
+	    		
+			} else {
+				
+		    	startActivity(new Intent(Order.this, Order.class));
+		    	finish();
+				
+			}
 	    	
 	    }
 	    
@@ -338,8 +369,18 @@ public class Order extends Activity {
 	    public void onClick(View v) {
 	    	
 	    	Pizzamenu.pizzaOrderedList.remove(3);
-	    	startActivity(new Intent(Order.this, Order.class));
-	    	finish();
+	    	
+	    	if (Pizzamenu.pizzaOrderedList.isEmpty()) {
+				
+	    		startActivity(new Intent(Order.this, Pizzamenu.class));
+		    	finish();
+	    		
+			} else {
+				
+		    	startActivity(new Intent(Order.this, Order.class));
+		    	finish();
+				
+			}
 	    	
 	    }
 	    
@@ -350,8 +391,18 @@ public class Order extends Activity {
 	    public void onClick(View v) {
 	    	
 	    	Pizzamenu.pizzaOrderedList.remove(4);
-	    	startActivity(new Intent(Order.this, Order.class));
-	    	finish();
+	    	
+	    	if (Pizzamenu.pizzaOrderedList.isEmpty()) {
+				
+	    		startActivity(new Intent(Order.this, Pizzamenu.class));
+		    	finish();
+	    		
+			} else {
+				
+		    	startActivity(new Intent(Order.this, Order.class));
+		    	finish();
+				
+			}
 	    	
 	    }
 	    
@@ -362,8 +413,18 @@ public class Order extends Activity {
 	    public void onClick(View v) {
 	    	
 	    	Pizzamenu.pizzaOrderedList.remove(5);
-	    	startActivity(new Intent(Order.this, Order.class));
-	    	finish();
+	    	
+	    	if (Pizzamenu.pizzaOrderedList.isEmpty()) {
+				
+	    		startActivity(new Intent(Order.this, Pizzamenu.class));
+		    	finish();
+	    		
+			} else {
+				
+		    	startActivity(new Intent(Order.this, Order.class));
+		    	finish();
+				
+			}
 	    	
 	    }
 	    
@@ -374,8 +435,18 @@ public class Order extends Activity {
 	    public void onClick(View v) {
 	    	
 	    	Pizzamenu.pizzaOrderedList.remove(6);
-	    	startActivity(new Intent(Order.this, Order.class));
-	    	finish();
+	    	
+	    	if (Pizzamenu.pizzaOrderedList.isEmpty()) {
+				
+	    		startActivity(new Intent(Order.this, Pizzamenu.class));
+		    	finish();
+	    		
+			} else {
+				
+		    	startActivity(new Intent(Order.this, Order.class));
+		    	finish();
+				
+			}
 	    	
 	    }
 	    
@@ -386,8 +457,18 @@ public class Order extends Activity {
 	    public void onClick(View v) {
 	    	
 	    	Pizzamenu.pizzaOrderedList.remove(7);
-	    	startActivity(new Intent(Order.this, Order.class));
-	    	finish();
+	    	
+	    	if (Pizzamenu.pizzaOrderedList.isEmpty()) {
+				
+	    		startActivity(new Intent(Order.this, Pizzamenu.class));
+		    	finish();
+	    		
+			} else {
+				
+		    	startActivity(new Intent(Order.this, Order.class));
+		    	finish();
+				
+			}
 	    	
 	    }
 	    
@@ -398,8 +479,18 @@ public class Order extends Activity {
 	    public void onClick(View v) {
 	    	
 	    	Pizzamenu.pizzaOrderedList.remove(8);
-	    	startActivity(new Intent(Order.this, Order.class));
-	    	finish();
+	    	
+	    	if (Pizzamenu.pizzaOrderedList.isEmpty()) {
+				
+	    		startActivity(new Intent(Order.this, Pizzamenu.class));
+		    	finish();
+	    		
+			} else {
+				
+		    	startActivity(new Intent(Order.this, Order.class));
+		    	finish();
+				
+			}
 	    	
 	    }
 	    
@@ -413,6 +504,7 @@ public class Order extends Activity {
 				
 			} else {
 				
+				Payment.fastMode = false;
 		    	startActivity(new Intent(Order.this, Payment.class));
 				
 			}
