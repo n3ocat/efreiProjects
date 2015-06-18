@@ -8,6 +8,7 @@ import com.google.zxing.qrcode.QRCodeWriter;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -143,9 +144,67 @@ public class Payment extends Activity {
 				thingToBuy = new PayPalPayment(new BigDecimal(Order.totalOrder),
 						"EUR", "Pizza command", PayPalPayment.PAYMENT_INTENT_SALE);
 			} else {
-	
-				thingToBuy = new PayPalPayment(new BigDecimal(11),
-						"EUR", "Fast & Furious, pizza : cannibale", PayPalPayment.PAYMENT_INTENT_SALE);
+				
+				SharedPreferences sharedPreferences = getSharedPreferences("My_pref", Activity.MODE_PRIVATE);
+				String favoritePizza = sharedPreferences.getString("spin1Saved", "Favorite pizza 1st : Reine");
+				
+				switch (favoritePizza) {
+				
+				case "Favorite pizza 1st : Reine" :
+					
+					thingToBuy = new PayPalPayment(new BigDecimal(9),
+							"EUR", "Fast & Furious, pizza : Reine", PayPalPayment.PAYMENT_INTENT_SALE);
+					break;
+					
+				case "Favorite pizza 1st : 4Fromages" :
+					
+					thingToBuy = new PayPalPayment(new BigDecimal(9),
+							"EUR", "Fast & Furious, pizza : Quatre fromages", PayPalPayment.PAYMENT_INTENT_SALE);
+					break;
+									
+				case "Favorite pizza 1st : Margherita" :
+					
+					thingToBuy = new PayPalPayment(new BigDecimal(7),
+							"EUR", "Fast & Furious, pizza : Margherita", PayPalPayment.PAYMENT_INTENT_SALE);
+					break;
+					
+				case "Favorite pizza 1st : Cannibale" :
+					
+					thingToBuy = new PayPalPayment(new BigDecimal(11),
+							"EUR", "Fast & Furious, pizza : Cannibale", PayPalPayment.PAYMENT_INTENT_SALE);
+					break;
+					
+				case "Favorite pizza 1st : Forestière" :
+					
+					thingToBuy = new PayPalPayment(new BigDecimal(8),
+							"EUR", "Fast & Furious, pizza : Forestière", PayPalPayment.PAYMENT_INTENT_SALE);
+					break;
+					
+				case "Favorite pizza 1st : Indienne" :
+					
+					thingToBuy = new PayPalPayment(new BigDecimal(9),
+							"EUR", "Fast & Furious, pizza : Indienne", PayPalPayment.PAYMENT_INTENT_SALE);
+					break;
+					
+				case "Favorite pizza 1st : Orientale" :
+					
+					thingToBuy = new PayPalPayment(new BigDecimal(10),
+							"EUR", "Fast & Furious, pizza : Orientale", PayPalPayment.PAYMENT_INTENT_SALE);
+					break;
+					
+				case "Favorite pizza 1st : Saumoneta" :
+					
+					thingToBuy = new PayPalPayment(new BigDecimal(11),
+							"EUR", "Fast & Furious, pizza : Saumoneta", PayPalPayment.PAYMENT_INTENT_SALE);
+					break;
+					
+				case "Favorite pizza 1st : Savoyarde" :
+					
+					thingToBuy = new PayPalPayment(new BigDecimal(12),
+							"EUR", "Fast & Furious, pizza : Savoyarde", PayPalPayment.PAYMENT_INTENT_SALE);
+					break;
+
+				}
 				
 			}
 			

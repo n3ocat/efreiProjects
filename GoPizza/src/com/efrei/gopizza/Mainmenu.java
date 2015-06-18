@@ -3,6 +3,8 @@ package com.efrei.gopizza;
 import com.example.gopizza.R;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -24,16 +26,50 @@ public class Mainmenu extends Activity {
 
 	public void fastPizza(View pressed) {
 		
-		Payment.fastMode = true;
-		startActivity(new Intent(Mainmenu.this, Payment.class));
-		finish();
+		if (!Config.connected) {
+			
+			new AlertDialog.Builder(this)
+			.setTitle("Mainmenu")
+		    .setMessage("You have to be connected =(")
+		    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+		        public void onClick(DialogInterface dialog, int which) { 
+		            // continue with delete
+		        }
+		     })
+		    .setIcon(android.R.drawable.ic_dialog_alert)
+		    .show();
+			
+		} else {
+
+			Payment.fastMode = true;
+			startActivity(new Intent(Mainmenu.this, Payment.class));
+			finish();
+		
+		}
 		
 	}
 	
 	public void buttonTopClick(View view) {
 
-		startActivity(new Intent(Mainmenu.this, Pizzamenu.class));
-		finish();
+		if (!Config.connected) {
+			
+			new AlertDialog.Builder(this)
+			.setTitle("Mainmenu")
+		    .setMessage("You have to be connected =(")
+		    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+		        public void onClick(DialogInterface dialog, int which) { 
+		            // continue with delete
+		        }
+		     })
+		    .setIcon(android.R.drawable.ic_dialog_alert)
+		    .show();
+			
+		} else {
+			
+			startActivity(new Intent(Mainmenu.this, Pizzamenu.class));
+			finish();
+			
+		}
 
 	}
 	
